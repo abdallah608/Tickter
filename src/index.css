@@ -1,0 +1,10 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components { 
+  .pageGeneralClass {
+    @apply bg-white p-4 md:p-8;
+  }
+};
