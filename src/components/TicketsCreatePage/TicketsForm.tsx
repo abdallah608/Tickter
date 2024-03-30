@@ -1,9 +1,10 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { TicketCreated } from "../Typing/TicketTyping";
 import CustomSpinner from "../Spinner/CustomSpinner";
 import "./ticket.css";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 interface Props {
   onSuccessHandeler: () => void;
 }
@@ -28,6 +29,10 @@ const TicketsForm = ({ onSuccessHandeler }: Props) => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ticket Form</title>
+      </Helmet>
       {isLoading && <CustomSpinner />}
       <div className="">
         <form

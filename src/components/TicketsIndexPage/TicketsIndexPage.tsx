@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import BackButton from "../BackButton/BackButton";
 import { Ticket } from "../Typing/TicketTyping";
 import { Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import { AiOutlinePlusSquare } from "react-icons/ai";
 import axios from "axios";
 import CustomSpinner from "../Spinner/CustomSpinner";
 import moment from "moment";
+import { Helmet } from "react-helmet";
 const TicketsIndexPage = () => {
   const [Tickets, setTickets] = useState<Ticket[]>([]);
   const [isLoading, setIsLoading] = useState<Boolean>(true);
@@ -84,6 +85,10 @@ const TicketsIndexPage = () => {
   );
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ticket Page</title>
+      </Helmet>
       <div className="pageGeneralClass">
         <BackButton previousRoute="/" />
 

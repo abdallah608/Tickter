@@ -4,6 +4,7 @@ import { Ticket, TicketCreated } from "../Typing/TicketTyping";
 import CustomSpinner from "../Spinner/CustomSpinner";
 import "./ticket.css";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 interface Props {
   onSuccessHandeler: () => void;
   onFailureHandeler: () => void;
@@ -52,6 +53,10 @@ const EditForm = ({ onSuccessHandeler, onFailureHandeler, id }: Props) => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Edit Form</title>
+      </Helmet>
       {isLoading && <CustomSpinner />}
       <div className="">
         <form

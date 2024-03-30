@@ -1,7 +1,13 @@
+import {Helmet} from "react-helmet";
 import { Link } from "react-router-dom";
-
 const HomePage = () => {
   return (
+    <>
+          <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home</title>
+      </Helmet>
+
     <div className="pageGeneralClass flex flex-col justify-center items-center gap-y-6 sm:gap-y-14 ">
       <div className="text-center mt-20">
         <h1 className=" relative text-2xl sm:text-4xl font-bold ">
@@ -17,6 +23,7 @@ const HomePage = () => {
         Tickets
       </Link>
     </div>
+    </>
   );
 };
 
