@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Ticket } from "../Typing/TicketTyping";
 import BackButton from "../BackButton/BackButton";
 import CustomSpinner from "../Spinner/CustomSpinner";
@@ -87,6 +87,22 @@ const TicketDetails = () => {
                   Ticket Price :{" "}
                 </span>
                 <span className="text-lg">{tickets?.price}</span>
+              </div>
+              <div className="flex justify-between max-w-56">
+              <Link
+                to={`/tickets/edit/${tickets?.id}`}
+                className="bg-yellow-600 text-lg px-3 py-1 rounded-md mx-1 "
+              >
+                {" "}
+                Edit
+              </Link>
+              <Link
+                to={`/tickets/delete/${tickets?.id}`}
+                className="bg-red-600 px-3 py-1 text-lg rounded-md mx-1 "
+              >
+                {" "}
+                Delete
+              </Link>
               </div>
             </div>
           </>

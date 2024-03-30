@@ -169,7 +169,7 @@ const EditForm = ({ onSuccessHandeler, onFailureHandeler, id }: Props) => {
               className="bg-yellow-600 text-white px-4 py-2 mx-8 my-2 rounded-lg"
               onClick={() => reset()}
             >
-              Reset Form
+              Reset
             </button>
           </div>
         </form>
